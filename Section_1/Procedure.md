@@ -104,6 +104,8 @@ Here’s a detailed breakdown of your flowchart with *purpose, **input, and **ou
 * You *cannot simulate EM fields* without first defining the geometry and material properties (Steps A–D).
 * *PINN is a forward solver, so it needs **dielectric maps as input* and produces *wave response data (fields or S-parameters)* for further imaging steps.
 
+
+
 flowchart TD
     A[Start: Define Simulation Domain] --> B[Generate Breast Phantom]
     B --> C[Add Tumor Models]
