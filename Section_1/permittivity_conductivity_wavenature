@@ -1,0 +1,45 @@
+Here’s a concise summary of the last 3 prompts (so you can keep it for quick reference later):
+
+---
+
+### 🔹 Why scattering happens
+
+* Microwaves travel smoothly in uniform tissue.
+* At a **boundary with different properties (ε, σ)**, part of the wave bends or spreads out → **scattering**.
+* Larger contrast = stronger scattering (like a bigger stone making bigger ripples in water).
+
+---
+
+### 🔹 Role of permittivity vs conductivity
+
+* **Permittivity (ε):**
+
+  * Controls **wave speed**.
+  * Change in permittivity → change in speed → wave bends (refraction) → **main cause of direction change**.
+
+* **Conductivity (σ):**
+
+  * Controls **energy loss (attenuation)**.
+  * Higher conductivity → wave becomes weaker as it travels (absorbed into heat).
+  * Does not really bend the wave, but affects **strength of scattered signal**.
+
+---
+
+### 🔹 Combined effect
+
+* Together, they form **complex permittivity**:
+
+  $$
+  \tilde{\varepsilon} = \varepsilon - j\frac{\sigma}{\omega}
+  $$
+* **ε difference** → bending/scattering.
+* **σ difference** → attenuation, uneven intensities, more realistic scattering patterns.
+
+---
+
+👉 **Analogy:**
+
+* **Permittivity** = road with changing speed limits → car changes speed/direction.
+* **Conductivity** = rough road → car loses energy but doesn’t change direction much.
+
+
