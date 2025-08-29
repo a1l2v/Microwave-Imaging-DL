@@ -36,9 +36,18 @@ def load_dielectric_csv(filepath):
 def get_stats_near(df, f0=3.0, bw=0.1):
     """Return mean and std of eps/sigma near f0 GHz."""
     sub = df[(df["freq"] >= f0-bw) & (df["freq"] <= f0+bw)]
+    eps_mean = sub["eps"].mean()
+    eps_std = sub["eps"].std()
+    sig_mean = sub["sigma"].mean()
+    sig_std = sub["sigma"].std()
+    # If any are NaN, set defaults
+    if np.isnan(eps_mean): eps_mean = 10
+    if np.isnan(eps_std):  eps_std  = 1
+    if np.isnan(sig_mean): sig_mean = 0.5
+    if np.isnan(sig_std):  sig_std  = 0.1
     return dict(
-        eps_mean=sub["eps"].mean(), eps_std=sub["eps"].std(),
-        sig_mean=sub["sigma"].mean(), sig_std=sub["sigma"].std()
+        eps_mean=eps_mean, eps_std=eps_std,
+        sig_mean=sig_mean, sig_std=sig_std
     )
 
 def truncnorm_sample(mean, std, low, high, size=None):
